@@ -177,7 +177,6 @@ class GamePage extends StatelessWidget {
     _tasks.add("PERSONA draw a mustache on your face with a marker and leave it there at least until your next turn or drink three times.");
     _tasks.add("PERSONA let another player give you a wedgie or take one shot.");
     _tasks.add("PERSONA demonstrate how to give a blowjob for 15 seconds on a random object or drink four times.");
-    _tasks.add("PERSONA confess who out of the group you would fuck, marry and kill or drink four times.");
     _tasks.add("PERSONA name three sex positions or drink three times.");
     _tasks.add("PERSONA deep throat a banana or finish your drink.");
     _tasks.add("PERSONA simultaneously hop on one foot, pat your head and rub your belly for 10 seconds if you fail drink three times.");
@@ -273,6 +272,7 @@ class GamePage extends StatelessWidget {
 
   void initializeFourPersons() {
     _tasks.add('PERSONA, PERSONB, PERSONC and PERSOND have sex together or drink four times.');
+    _tasks.add("PERSONA confess who out of the group you would fuck, marry and kill or drink four times.");
   }
 
 //TODO
