@@ -5,8 +5,8 @@ import 'GamePage.dart';
 // ignore: must_be_immutable
 class PlayersPage extends StatelessWidget {
   var _controller = TextEditingController();
-  GamePage _gamePage = GamePage();
   List<String> _players = List<String>();
+  GamePage _gamePage = GamePage();
 
   showAlertDialogForToLessPlayers(BuildContext context) {
     // set up the button

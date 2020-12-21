@@ -4,89 +4,73 @@ import 'PlayersPage.dart';
 
 // ignore: must_be_immutable
 class GamePage extends StatelessWidget {
-  List<String> _tasksForOnePerson = List<String>();
-  List<String> _tasksForTwoPersons = List<String>();
-  List<String> _tasksForAllPersons = List<String>();
+  List<String> _tasks = List<String>();
   List<String> _persons = List<String>();
   bool isFirstTask = true;
 
-  List getTwoRandomPersons() {
-    var person1 = getRandomElement(_persons);
-    var person2;
-    do {
-      person2 = getRandomElement(_persons);
-    } while (person1 == person2);
-    return [person1, person2];
-  }
 
   String getOneRandomPerson() {
     var person = getRandomElement(_persons);
     return person;
   }
 
-  List getRandomTask() {
-    var taskLists = ['OnePersonTasks', 'TwoPersonsTasks', 'AllPersonsTask'];
-    var taskList = getRandomElement(taskLists);
-    print(taskList);
-    var task;
-    var personCount;
-    switch (taskList) {
-      case 'OnePersonTasks':
-        {
-          task = getRandomElement(_tasksForOnePerson);
-          personCount = 1;
-        }
-        break;
-      case 'TwoPersonsTasks':
-        {
-          task = getRandomElement(_tasksForTwoPersons);
-          personCount = 2;
-        }
-        break;
-      case 'AllPersonsTask':
-        {
-          task = getRandomElement(_tasksForAllPersons);
-          personCount = 0;
-        }
-        break;
-    }
-    List countAndTask = [personCount, task];
-    return countAndTask;
+  String getRandomTask() {
+    String task = getRandomElement(_tasks);
+    return task;
   }
 
   String generateGameTask() {
     if (isFirstTask) {
-      initializeLists();
+      initializeTasks();
       isFirstTask = false;
     }
-    var countAndTask = getRandomTask();
-    var persons = getTwoRandomPersons();
-    var personA = persons[0];
-    var personB = persons[1];
-    String finalTask;
+    var task = getRandomTask();
+    var randomPersons = get4RandomPersons();
+    var personA = randomPersons[0];
+    var personB = randomPersons[1];
+    var personC = randomPersons[2];
+    var personD = randomPersons[3];
 
-    switch (countAndTask[0]) {
-      case 0:
-        {
-          finalTask = countAndTask[1];
-        }
-        break;
-      case 1:
-        {
-          finalTask = countAndTask[1];
-          finalTask = finalTask.replaceAll('PERSONA', personA);
-        }
-        break;
-      case 2:
-        {
-          finalTask = countAndTask[1];
-          finalTask = finalTask.replaceAll("PERSONA", personA);
-          finalTask = finalTask.replaceAll("PERSONB", personB);
-        }
-        break;
-    }
-    return finalTask;
+    print(task);
+    print(randomPersons);
+    task = task.replaceAll("PERSONA", personA);
+    task = task.replaceAll("PERSONB", personB);
+    task = task.replaceAll("PERSONC", personC);
+    task = task.replaceAll("PERSOND", personD);
+
+    return task;
   }
+
+  List get4RandomPersons() {
+    List notAssignedPersons = new List<String>.from(_persons);
+    List randomPersons = new List<String>();
+
+    var person1 = getRandomElement(notAssignedPersons);
+    notAssignedPersons.remove(person1);
+    notAssignedPersons.join(', ');
+    randomPersons.add(person1);
+
+    var person2 = getRandomElement(notAssignedPersons);
+    notAssignedPersons.remove(person2);
+    randomPersons.add(person2);
+
+    var person3 = "";
+    var person4 = "";
+    if(_persons.length >= 4) {
+      person3 = getRandomElement(notAssignedPersons);
+      notAssignedPersons.remove(person3);
+      notAssignedPersons.join(', ');
+
+      person4 = getRandomElement(notAssignedPersons);
+      notAssignedPersons.remove(person4);
+      notAssignedPersons.join(', ');
+    }
+    randomPersons.add(person3);
+    randomPersons.add(person4);
+
+    return randomPersons;
+  }
+
 
   T getRandomElement<T>(List<T> list) {
     final random = new Random();
@@ -133,13 +117,30 @@ class GamePage extends StatelessWidget {
     _persons = players;
   }
 
-  void initializeLists() {
-    _tasksForAllPersons.add('Everybody undresses one clothing.');
-    _tasksForOnePerson.add('PERSONA take off your pants or finish your drink.');
-    _tasksForTwoPersons.add(
-        'PERSONA and PERSONB either make out or both of you finish your drink.');
+  void initializeTasks() {
+    initializeAllPersons();
+    initializeOnePerson();
+    initializeTwoPersons();
+    if(_persons.length >= 4) {
+      initializeFourPersons();
+    }
   }
 
+  void initializeAllPersons() {
+    _tasks.add('Everybody undresses one clothing or finishes their drink.');
+  }
+
+  void initializeOnePerson() {
+    _tasks.add('PERSONA take off your pants/skirt or drink 3 times. If you dont wear any chose another clothing.');
+  }
+
+  void initializeTwoPersons() {
+    _tasks.add('PERSONA and PERSONB make out or both of you drink 2 times.');
+  }
+
+  void initializeFourPersons() {
+    _tasks.add('PERSONA, PERSONB, PERSONC and PERSOND have sex together or drink 4 times.');
+  }
 
 //TODO
 //            new GestureDetector(
