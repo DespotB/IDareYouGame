@@ -124,6 +124,7 @@ class GamePage extends StatelessWidget {
     if(_persons.length >= 4) {
       initializeFourPersons();
     }
+    print(_tasks.length);
   }
 
   void initializeAllPersons() {
@@ -131,7 +132,7 @@ class GamePage extends StatelessWidget {
   }
 
   void initializeOnePerson() {
-    _tasks.add('PERSONA take off your pants/skirt or drink 3 times. If you dont wear any chose another clothing.');
+    _tasks.add("PERSONA take off your pants/skirt or drink 3 times. If you don't wear any chose another clothing.");
     _tasks.add('PERSONA write you ex that you want to come back together or drink two times');
     _tasks.add('PERSONA confess which players mom you think is the hottest or drink three times.');
     _tasks.add('PERSONA do 10 push-ups successfully with good from or drink two times.');
@@ -146,7 +147,7 @@ class GamePage extends StatelessWidget {
     _tasks.add('PERSONA tell the group which one of them you think has Big Dick Energy or drink four times.');
     _tasks.add('PERSONA get naked or finish your drink.');
     _tasks.add('PERSONA name at least three types of sex toys or drink three times.');
-    _tasks.add('PERSONA name at least three pornstars or drink three times.');
+    _tasks.add('PERSONA name at least three porn stars or drink three times.');
     _tasks.add('PERSONA take of three articles of clothing or drink 2 shots.');
     _tasks.add('FREESTYLE: The group makes up a challenge for PERSONA, do it or you drink four times.');
     _tasks.add('FREESTYLE: The group makes up a challenge for PERSONA, do it or you drink four times.');
@@ -169,7 +170,7 @@ class GamePage extends StatelessWidget {
     _tasks.add("PERSONA reveal to everyone every single drug you've done or drink two times.");
     _tasks.add('PERSONA choose a player and give him a wet kiss or both of you finish your drinks.');
     _tasks.add("PERSONA show every tattoo you have, regardless of where it is or drink four times. If you don't have any tattoo drink three times.");
-    _tasks.add("PERSONA take of a piece of clothing everytime you curse for the rest of the game or finish your drink.");
+    _tasks.add("PERSONA take of a piece of clothing every time you curse for the rest of the game or finish your drink.");
     _tasks.add("PERSONA reveal to everyone how many people you've slept with or drink four times.");
     _tasks.add("PERSONA tell everyone who you voted for in the last election or drink two times.");
     _tasks.add("PERSONA shave an eyebrow or drink two times.");
@@ -180,12 +181,12 @@ class GamePage extends StatelessWidget {
     _tasks.add("PERSONA name three sex positions or drink three times.");
     _tasks.add("PERSONA deep throat a banana or finish your drink.");
     _tasks.add("PERSONA simultaneously hop on one foot, pat your head and rub your belly for 10 seconds if you fail drink three times.");
-    _tasks.add("PERSONA gets blindfold and spinned around. Walk until you bumo into a person or object and make out with them or finish your drink.");
+    _tasks.add("PERSONA gets blindfold and spinned around. Walk until you bump into a person or object and make out with them or finish your drink.");
     _tasks.add("PERSONA take off one article of clothing every time someone drinks until you're down to your underwear. Stay like this for the rest of the game. Do this or drink five times.");
     _tasks.add("PERSONA attempt to do the worm or drink twice.");
     _tasks.add("PERSONA name at least three different strains of weed or drink two times.");
     _tasks.add("PERSONA dm your crush or drink two times.");
-    _tasks.add("PERSONA make a fartnoise with your hand or drink.");
+    _tasks.add("PERSONA make a fart noise with your hand or drink.");
     _tasks.add("PERSONA twerk for 20 seconds or drink twice.");
     _tasks.add("PERSONA guess which player has a condom with them currently. If you get it right they drink twice, else you drink twice.");
     _tasks.add("PERSONA get blindfolded and feel someones face. If you can't guess who it is on the first try, drink twice.");
@@ -214,7 +215,7 @@ class GamePage extends StatelessWidget {
     _tasks.add('PERSONA give a foot massage to PERSONB or both of you drink two times.');
     _tasks.add('PERSONA bite the booty of PERSONB or both of you drink three times.');
     _tasks.add('PERSONA lick the neck of PERSONB and describe the taste or drink two times.');
-    _tasks.add('PERSONA guess if PERSONB has had or given road head. if you get it wrong drink two times else the other person drinks two times.');
+    _tasks.add('PERSONA guess if PERSONB has had or given road head. If you get it wrong drink two times else the other person drinks two times.');
     _tasks.add('PERSONA let PERSONB tickle you for 20 second or drink one time.');
     _tasks.add('PERSONA send your best friend a picture with PERSONB or drink five times.');
     _tasks.add('PERSONA give a lap dance to PERSONB or finish your drink.');
@@ -227,8 +228,8 @@ class GamePage extends StatelessWidget {
     _tasks.add('PERSONA put your hand on the genitals of PERSONB for 15 seconds or both of you drink three times.');
     _tasks.add('PERSONA give PERSONB a back massage for 30 seconds while whispering sexually in their ear or drink two times.');
     _tasks.add('PERSONA text a random phone number which PERSONB gives you "u up" or drink two times.');
-    _tasks.add("PERSONA try to make PERSONB nervous. If you succes they drink three times, else you drink three times. The group decides.");
-    _tasks.add("PERSONA touch noses with PERSONB for 60 seconds wihtout breaking eye contact or both you of you finish your drinks.");
+    _tasks.add("PERSONA try to make PERSONB nervous. If you success they drink three times, else you drink three times. The group decides.");
+    _tasks.add("PERSONA touch noses with PERSONB for 60 seconds without breaking eye contact or both you of you finish your drinks.");
     _tasks.add("PERSONA give your phone to PERSONB and let them text a contact of their choice or drink three times.");
     _tasks.add("PERSONA lick the nipple of PERSONB, both of you must do this or finish your drinks.");
     _tasks.add("PERSONA and PERSONB are having a dance off. The loser drinks three times. The group decides.");
@@ -256,7 +257,7 @@ class GamePage extends StatelessWidget {
     _tasks.add("PERSONA place your hand on the crotch of PERSONB for 10 seconds. Do this or both of you drink three times.");
     _tasks.add("PERSONA place your hand on the breast of PERSONB for 10 seconds. Do this or both of you drink three times.");
     _tasks.add("PERSONA turn your phone off for the rest of the game or drink four times. If you turn it on later finish your drink");
-    _tasks.add("PERSONA without laughing or breaking eye contact, unzip the pants of PERSONB. If you take longer then 20 seconds or don't do itdrink the times.");
+    _tasks.add("PERSONA without laughing or breaking eye contact, unzip the pants of PERSONB. If you take longer then 20 seconds or don't do it drink the times.");
     _tasks.add("PERSONA let PERSONB give you a titty twister or drink four times.");
     _tasks.add("PERSONA go have sex with PERSONB or both of you finish your drinks.");
     _tasks.add("PERSONA ask PERSONB a true or false question about yourself. If they get it right you drink, else they drink.");
@@ -268,7 +269,6 @@ class GamePage extends StatelessWidget {
     _tasks.add('PERSONA, PERSONB and PERSONC act out a sex position you would choose if you had a threesome or drink four times.');
     _tasks.add('PERSONA let PERSONB and PERSONC pinch your nipples or drink four times.');
     _tasks.add('PERSONA and PERSONB act out a sex position which PERSONC chooses or drink two times.');
-
   }
 
   void initializeFourPersons() {
