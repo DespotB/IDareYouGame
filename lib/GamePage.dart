@@ -200,6 +200,12 @@ class GamePage extends StatelessWidget {
     _tasks.add("PERSONA apply eyeliner with a black marker or drink four times.");
     _tasks.add("PERSONA remove your pants and sit in your underwear until your next turn or finish your drink.");
     _tasks.add("PERSONA try to shoot a balled up piece of paper into a cup of trash. If you miss drink twice, if you make it everybody else drinks twice.");
+    _tasks.add("PERSONA freestyle rap for 20 seconds or finish your drink.");
+    _tasks.add("PERSONA go fill up a sink with cold water and dunk your face for 10 seconds or drink three times.");
+    _tasks.add("PERSONA go pantless for one round or finish your drink.");
+    _tasks.add("PERSONA call your mum or your dad and tell them you need to get bailed out of jail or drink three times.");
+    _tasks.add("PERSONA put two ice cubes under your armpits and leave them there until they melt or drink twice.");
+    _tasks.add("PERSONA dance on the table to a song of the groups choice for at least 30 second or finish your drink.");
   }
 
   void initializeTwoPersons() {
@@ -249,7 +255,12 @@ class GamePage extends StatelessWidget {
     _tasks.add("PERSONA take a shot of the belly of PERSONB. Both must do this or take three shots.");
     _tasks.add("PERSONA place your hand on the crotch of PERSONB for 10 seconds. Do this or both of you drink three times.");
     _tasks.add("PERSONA place your hand on the breast of PERSONB for 10 seconds. Do this or both of you drink three times.");
-    _tasks.add("PERSONA .");
+    _tasks.add("PERSONA turn your phone off for the rest of the game or drink four times. If you turn it on later finish your drink");
+    _tasks.add("PERSONA without laughing or breaking eye contact, unzip the pants of PERSONB. If you take longer then 20 seconds or don't do itdrink the times.");
+    _tasks.add("PERSONA let PERSONB give you a titty twister or drink four times.");
+    _tasks.add("PERSONA go have sex with PERSONB or both of you finish your drinks.");
+    _tasks.add("PERSONA ask PERSONB a true or false question about yourself. If they get it right you drink, else they drink.");
+    _tasks.add("PERSONA use your feet to give PERSONB a sip from their drink without spilling. Both must do this or drink three times.");
   }
 
   void initializeThreePersons(){
