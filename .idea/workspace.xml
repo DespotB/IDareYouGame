@@ -25,12 +25,7 @@
       <change beforePath="$PROJECT_DIR$/android/.gradle/5.6.2/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/5.6.2/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/android/.gradle/5.6.2/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/5.6.2/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/android/.gradle/5.6.2/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/5.6.2/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/.gradle/5.6.2/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/5.6.2/fileHashes/resourceHashesCache.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/.gradle/5.6.2/javaCompile/jarAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/5.6.2/javaCompile/jarAnalysis.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/.gradle/5.6.2/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/5.6.2/javaCompile/javaCompile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/.gradle/5.6.2/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/5.6.2/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/android/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/GamePage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/GamePage.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/PlayersPage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/PlayersPage.dart" afterDir="false" />
     </list>
@@ -95,22 +90,22 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="1060" y="455" key="FileChooserDialogImpl/2560.203.1920.1040/0.0.2560.1400@0.0.2560.1400" timestamp="1608294921562" />
-    <state width="1258" height="474" key="GridCell.Tab.0.bottom" timestamp="1608577766470">
+    <state width="1258" height="474" key="GridCell.Tab.0.bottom" timestamp="1608578501478">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="1258" height="474" key="GridCell.Tab.0.bottom/2560.203.1920.1040/0.0.2560.1400@0.0.2560.1400" timestamp="1608577766470" />
-    <state width="1258" height="474" key="GridCell.Tab.0.center" timestamp="1608577766470">
+    <state width="1258" height="474" key="GridCell.Tab.0.bottom/2560.203.1920.1040/0.0.2560.1400@0.0.2560.1400" timestamp="1608578501478" />
+    <state width="1258" height="474" key="GridCell.Tab.0.center" timestamp="1608578501477">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="1258" height="474" key="GridCell.Tab.0.center/2560.203.1920.1040/0.0.2560.1400@0.0.2560.1400" timestamp="1608577766470" />
-    <state width="1258" height="474" key="GridCell.Tab.0.left" timestamp="1608577766469">
+    <state width="1258" height="474" key="GridCell.Tab.0.center/2560.203.1920.1040/0.0.2560.1400@0.0.2560.1400" timestamp="1608578501477" />
+    <state width="1258" height="474" key="GridCell.Tab.0.left" timestamp="1608578501477">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="1258" height="474" key="GridCell.Tab.0.left/2560.203.1920.1040/0.0.2560.1400@0.0.2560.1400" timestamp="1608577766469" />
-    <state width="1258" height="474" key="GridCell.Tab.0.right" timestamp="1608577766470">
+    <state width="1258" height="474" key="GridCell.Tab.0.left/2560.203.1920.1040/0.0.2560.1400@0.0.2560.1400" timestamp="1608578501477" />
+    <state width="1258" height="474" key="GridCell.Tab.0.right" timestamp="1608578501477">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="1258" height="474" key="GridCell.Tab.0.right/2560.203.1920.1040/0.0.2560.1400@0.0.2560.1400" timestamp="1608577766470" />
+    <state width="1258" height="474" key="GridCell.Tab.0.right/2560.203.1920.1040/0.0.2560.1400@0.0.2560.1400" timestamp="1608578501477" />
     <state x="806" y="438" width="672" height="678" key="search.everywhere.popup" timestamp="1608552529296">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>

@@ -79,7 +79,7 @@ class PlayersPage extends StatelessWidget {
                 ),
                 new Container(
                   child: new Text(
-                    'Ficolo',
+                    'Naughty Drinking Game',
                     textAlign: TextAlign.center,
                     style: TextStyle(
                         fontFamily: 'Aleo',
