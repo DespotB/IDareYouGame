@@ -1,4 +1,4 @@
-# ficolo_app
+# The Naughty Drinking Game
 
 Picolo but for free.
 
