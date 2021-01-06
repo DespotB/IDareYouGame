@@ -84,7 +84,7 @@ class GamePage extends StatelessWidget {
       home: Material(
         child: new Container(
           padding: const EdgeInsets.all(30.0),
-          color: Colors.pinkAccent,
+          color: Color(0xffff637b),
           child: new Container(
             child: new Center(
               child: new Column(children: [
@@ -102,7 +102,7 @@ class GamePage extends StatelessWidget {
                     (context as Element).reassemble();
                   },
                   label: Text('Next'),
-                  backgroundColor: Colors.indigo,
+                  backgroundColor: Color(0xFF3d5d72),
                 ),
               ]),
             ),
