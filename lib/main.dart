@@ -24,7 +24,7 @@ class _MyLoadingScreenState extends State<MyLoadingScreen> {
   void initState() {
     super.initState();
     Timer(
-        Duration(seconds: 3),
+        Duration(seconds: 5),
         () => Navigator.push(
             context, MaterialPageRoute(builder: (context) => PlayersPage())));
   }
@@ -39,6 +39,17 @@ class _MyLoadingScreenState extends State<MyLoadingScreen> {
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: <Widget>[
+          Text(
+            'Naughty Drinking Game',
+            textAlign: TextAlign.center,
+            style: TextStyle(
+                fontFamily: 'Aleo',
+                fontStyle: FontStyle.normal,
+                fontWeight: FontWeight.bold,
+                fontSize: 30.0,
+                color: Color(0xFF3d5d72)),
+          ),
+          SizedBox(height: 80.0),
           Image.asset(
             'assets/icon.png',
             height: 100.0,
