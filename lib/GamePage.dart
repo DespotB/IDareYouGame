@@ -102,7 +102,6 @@ class GamePage extends StatelessWidget {
                     (context as Element).reassemble();
                   },
                   label: Text('Next'),
-                  icon: Icon(Icons.adb_sharp),
                   backgroundColor: Colors.indigo,
                 ),
               ]),
