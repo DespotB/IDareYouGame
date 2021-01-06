@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'PlayersPage.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 
@@ -23,6 +24,7 @@ class _MyLoadingScreenState extends State<MyLoadingScreen> {
   @override
   void initState() {
     super.initState();
+
     Timer(
         Duration(seconds: 5),
         () => Navigator.push(
@@ -31,6 +33,7 @@ class _MyLoadingScreenState extends State<MyLoadingScreen> {
 
   @override
   Widget build(BuildContext context) {
+    SystemChrome.setEnabledSystemUIOverlays([]);
     return new Scaffold(
         body: Container(
       padding: const EdgeInsets.all(30.0),
