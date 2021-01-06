@@ -1,6 +1,6 @@
 # The Naughty Drinking Game
 
-Picolo but for free.
+Its a naughty drinking game for free.
 
 ## Getting Started
 

@@ -1,8 +1,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="at.despotBitschanu.ficolo_app">
    <application
-        android:label="ficolo_app"
-        android:icon="@mipmap/ic_launcher">
+        android:label="Naughty Drinking Game"
+        android:icon="@mipmap/icon">
         <activity
             android:name=".MainActivity"
             android:launchMode="singleTop"
