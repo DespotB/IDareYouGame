@@ -24,7 +24,6 @@ class _MyLoadingScreenState extends State<MyLoadingScreen> {
   @override
   void initState() {
     super.initState();
-
     Timer(
         Duration(seconds: 5),
         () => Navigator.push(

@@ -9,22 +9,46 @@ class GamePage extends StatelessWidget {
   List<String> _persons = List<String>();
   bool isFirstTask = true;
 
-  String getOneRandomPerson() {
-    var person = getRandomElement(_persons);
-    return person;
+  @override
+  Widget build(BuildContext context) {
+    SystemChrome.setEnabledSystemUIOverlays([]);
+    return MaterialApp(
+        home: Material(
+          child: GestureDetector(
+            behavior: HitTestBehavior.opaque,
+            onTap: () {
+              (context as Element).reassemble();
+            },
+            child: new Container(
+              padding: const EdgeInsets.all(30.0),
+              color: Color(0xffff637b),
+              child: new Container(
+                child: new Center(
+                  child: new Column(children: [
+                    new Container(
+                      height: 250.0,
+                      width: 800,
+                    ),
+                    Text(
+                      generateTask(),
+                      style: new TextStyle(color: Colors.white, fontSize: 20.0),
+                    ),
+                    new Padding(padding: EdgeInsets.only(top: 20.0)),
+                  ]),
+                ),
+              ),
+            ),
+          ),
+        )
+    );
   }
 
-  String getRandomTask() {
-    String task = getRandomElement(_tasks);
-    return task;
-  }
-
-  String generateGameTask() {
+  String generateTask() {
     if (isFirstTask) {
       initializeTasks();
       isFirstTask = false;
     }
-    var task = getRandomTask();
+    var task = getRandomElement(_persons);
     var randomPersons = get4RandomPersons();
     var personA = randomPersons[0];
     var personB = randomPersons[1];
@@ -37,7 +61,6 @@ class GamePage extends StatelessWidget {
     task = task.replaceAll("PERSONB", personB);
     task = task.replaceAll("PERSONC", personC);
     task = task.replaceAll("PERSOND", personD);
-
     return task;
   }
 
@@ -67,52 +90,17 @@ class GamePage extends StatelessWidget {
     }
     randomPersons.add(person3);
     randomPersons.add(person4);
-
     return randomPersons;
+  }
+
+  void setPersons(List players) {
+    _persons = players;
   }
 
   T getRandomElement<T>(List<T> list) {
     final random = new Random();
     var i = random.nextInt(list.length);
     return list[i];
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    SystemChrome.setEnabledSystemUIOverlays([]);
-    return MaterialApp(
-        home: Material(
-          child: GestureDetector(
-            behavior: HitTestBehavior.opaque,
-            onTap: () {
-              (context as Element).reassemble();
-            },
-            child: new Container(
-              padding: const EdgeInsets.all(30.0),
-              color: Color(0xffff637b),
-              child: new Container(
-                child: new Center(
-                  child: new Column(children: [
-                    new Container(
-                      height: 250.0,
-                      width: 800,
-                    ),
-                    Text(
-                      generateGameTask(),
-                      style: new TextStyle(color: Colors.white, fontSize: 20.0),
-                    ),
-                    new Padding(padding: EdgeInsets.only(top: 20.0)),
-                  ]),
-                ),
-              ),
-            ),
-          ),
-        )
-    );
-  }
-
-  void setPersons(List players) {
-    _persons = players;
   }
 
   void initializeTasks() {
