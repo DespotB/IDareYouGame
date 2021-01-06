@@ -101,7 +101,7 @@ class GamePage extends StatelessWidget {
                   onPressed: () {
                     (context as Element).reassemble();
                   },
-                  label: Text('Generate New Task'),
+                  label: Text('Next'),
                   icon: Icon(Icons.adb_sharp),
                   backgroundColor: Colors.indigo,
                 ),
