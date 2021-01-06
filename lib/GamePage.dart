@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'dart:math';
 import 'PlayersPage.dart';
 
@@ -11,7 +10,6 @@ class GamePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    SystemChrome.setEnabledSystemUIOverlays([]);
     return MaterialApp(
         home: Material(
           child: GestureDetector(
@@ -30,7 +28,7 @@ class GamePage extends StatelessWidget {
                       width: 800,
                     ),
                     Text(
-                      generateTask(),
+                      generateGameTask(),
                       style: new TextStyle(color: Colors.white, fontSize: 20.0),
                     ),
                     new Padding(padding: EdgeInsets.only(top: 20.0)),
@@ -43,12 +41,22 @@ class GamePage extends StatelessWidget {
     );
   }
 
-  String generateTask() {
+  String getOneRandomPerson() {
+    var person = getRandomElement(_persons);
+    return person;
+  }
+
+  String getRandomTask() {
+    String task = getRandomElement(_tasks);
+    return task;
+  }
+
+  String generateGameTask() {
     if (isFirstTask) {
       initializeTasks();
       isFirstTask = false;
     }
-    var task = getRandomElement(_persons);
+    var task = getRandomTask();
     var randomPersons = get4RandomPersons();
     var personA = randomPersons[0];
     var personB = randomPersons[1];
@@ -61,6 +69,7 @@ class GamePage extends StatelessWidget {
     task = task.replaceAll("PERSONB", personB);
     task = task.replaceAll("PERSONC", personC);
     task = task.replaceAll("PERSOND", personD);
+
     return task;
   }
 
@@ -90,17 +99,18 @@ class GamePage extends StatelessWidget {
     }
     randomPersons.add(person3);
     randomPersons.add(person4);
-    return randomPersons;
-  }
 
-  void setPersons(List players) {
-    _persons = players;
+    return randomPersons;
   }
 
   T getRandomElement<T>(List<T> list) {
     final random = new Random();
     var i = random.nextInt(list.length);
     return list[i];
+  }
+
+  void setPersons(List players) {
+    _persons = players;
   }
 
   void initializeTasks() {
@@ -286,7 +296,7 @@ class GamePage extends StatelessWidget {
     _tasks.add(
         'PERSONA text a random phone number which PERSONB gives you "u up" or drink two times.');
     _tasks.add(
-        "PERSONA try to make PERSONB nervous. If you succeed they drink three times, else you drink three times. The group decides.");
+        "PERSONA try to make PERSONB nervous. If you succedd they drink three times, else you drink three times. The group decides.");
     _tasks.add(
         "PERSONA touch noses with PERSONB for 60 seconds without breaking eye contact or both you of you finish your drinks.");
     _tasks.add(

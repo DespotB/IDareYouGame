@@ -94,7 +94,7 @@ class PlayersPage extends StatelessWidget {
                                 _controller.clear();
                                 (context as Element).reassemble();
                               } else {
-                                return showAlertDialogForToLessPlayers(context);
+                                return showAlertDialogForInvalidName(context);
                               }
                             },
                             icon: Icon(Icons.add_circle, color: Colors.white)),
@@ -131,7 +131,7 @@ class PlayersPage extends StatelessWidget {
                               builder: (context) => _gamePage));
                         }
                       },
-                      label: Text('Start Game'),
+                      label: Text('Start Game (' + _players.length.toString() + ')'),
                       icon: Icon(Icons.play_arrow_outlined),
                       backgroundColor: Color(0xFF3d5d72),
                     ),
@@ -139,6 +139,33 @@ class PlayersPage extends StatelessWidget {
                 ),
               ),
             )))));
+  }
+
+  showAlertDialogForInvalidName(BuildContext context) {
+    // set up the button
+    // set up the button
+    Widget okButton = FlatButton(
+      child: Text("OK"),
+      onPressed: () {
+        Navigator.of(context).pop(true);
+      },
+    );
+    // set up the AlertDialog
+    AlertDialog alert = AlertDialog(
+      title: Text("Attention!"),
+      content: Text("You need to enter a name before adding the player."),
+      actions: [
+        okButton,
+      ],
+    );
+
+    // show the dialog
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return alert;
+      },
+    );
   }
 
   showAlertDialogForToLessPlayers(BuildContext context) {
@@ -150,11 +177,10 @@ class PlayersPage extends StatelessWidget {
         Navigator.of(context).pop(true);
       },
     );
-
     // set up the AlertDialog
     AlertDialog alert = AlertDialog(
       title: Text("Attention!"),
-      content: Text("You need at least two players to play this game."),
+      content: Text("You need to have at least 2 players to start the game."),
       actions: [
         okButton,
       ],
