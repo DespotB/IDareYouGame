@@ -9,17 +9,6 @@ class GamePage extends StatelessWidget {
   bool isFirstTask = true;
   var _isNextBackgroundLight = true;
 
-
-  int generateBackground(){
-    if(_isNextBackgroundLight){
-      _isNextBackgroundLight = false;
-      return 0xffff637b;
-    } else {
-      _isNextBackgroundLight = true;
-      return 0xfff94367;
-    }
-  }
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -31,7 +20,7 @@ class GamePage extends StatelessWidget {
             },
             child: new Container(
               padding: const EdgeInsets.all(30.0),
-              color: Color(generateBackground()),
+              color: Color(generateBackgroundColor()),
               child: new Container(
                 child: new Center(
                   child: new Column(children: [
@@ -140,6 +129,16 @@ class GamePage extends StatelessWidget {
       initializeFourPersons();
     }
     print(_tasks.length);
+  }
+
+  int generateBackgroundColor(){
+    if(_isNextBackgroundLight){
+      _isNextBackgroundLight = false;
+      return 0xffff637b;
+    } else {
+      _isNextBackgroundLight = true;
+      return 0xfff94367;
+    }
   }
 
   void initializeAllPersons() {
