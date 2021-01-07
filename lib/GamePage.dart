@@ -7,6 +7,18 @@ class GamePage extends StatelessWidget {
   List<String> _tasks = List<String>();
   List<String> _persons = List<String>();
   bool isFirstTask = true;
+  var _isNextBackgroundLight = true;
+
+
+  int generateBackground(){
+    if(_isNextBackgroundLight){
+      _isNextBackgroundLight = false;
+      return 0xffff637b;
+    } else {
+      _isNextBackgroundLight = true;
+      return 0xfff94367;
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -19,10 +31,17 @@ class GamePage extends StatelessWidget {
             },
             child: new Container(
               padding: const EdgeInsets.all(30.0),
-              color: Color(0xffff637b),
+              color: Color(generateBackground()),
               child: new Container(
                 child: new Center(
                   child: new Column(children: [
+                    ClipRRect(
+                      borderRadius: BorderRadius.circular(8.0),
+                      child: Image.asset(
+                        'assets/icon.png',
+                        height: 40.0,
+                      ),
+                    ),
                     new Container(
                       height: 250.0,
                       width: 800,
