@@ -25,7 +25,7 @@ class _MyLoadingScreenState extends State<MyLoadingScreen> {
   void initState() {
     super.initState();
     Timer(
-        Duration(seconds: 4000),
+        Duration(seconds: 4),
         () => Navigator.push(
             context, MaterialPageRoute(builder: (context) => PlayersPage())));
   }
