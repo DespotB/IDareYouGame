@@ -1,9 +1,10 @@
 import 'dart:async';
 
+import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'PlayersPage.dart';
+import 'players_screen.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 
 void main() => runApp(new MyApp());
@@ -25,13 +26,14 @@ class _MyLoadingScreenState extends State<MyLoadingScreen> {
   void initState() {
     super.initState();
     Timer(
-        Duration(seconds: 4),
+        Duration(seconds: 5),
         () => Navigator.push(
             context, MaterialPageRoute(builder: (context) => PlayersPage())));
   }
 
   @override
   Widget build(BuildContext context) {
+
     SystemChrome.setEnabledSystemUIOverlays([]);
     return new Scaffold(
         body: Container(
@@ -39,17 +41,36 @@ class _MyLoadingScreenState extends State<MyLoadingScreen> {
       color: Color(0xffff637b),
       child: Column(
         children: <Widget>[
-          Text(
-            'Naughty Drinking Game',
-            textAlign: TextAlign.center,
-            style: TextStyle(
-                fontFamily: 'Pacifico',
+          SizedBox(height: 20.0),
+          SizedBox(
+            width: 250.0,
+            child: ScaleAnimatedTextKit(
+              text: ['Naughty Drinking Game'],
+              textAlign: TextAlign.center,
+              isRepeatingAnimation: false,
+              duration: Duration(milliseconds: 4000),
+              textStyle: TextStyle(
+                fontSize: 55.0,
+                fontFamily: "Horizon",
                 fontStyle: FontStyle.normal,
                 fontWeight: FontWeight.bold,
-                fontSize: 30.0,
-                color: Color(0xFF3d5d72)),
+                color: Color(0xFFFFFFFF),
+                shadows: [
+                  Shadow(
+                    color: Color(0xff00efd1),
+                    blurRadius: 10.0,
+                    offset: Offset(5.0, 5.0),
+                  ),
+                  Shadow(
+                    color: Color(0xFF3d5d72),
+                    blurRadius: 10.0,
+                    offset: Offset(-5.0, 5.0),
+                  ),
+                ],
+              ),
+            ),
           ),
-          SizedBox(height: 200.0),
+          SizedBox(height: 70.0),
           Image.asset(
             'assets/icon.png',
             height: 100.0,
@@ -58,6 +79,8 @@ class _MyLoadingScreenState extends State<MyLoadingScreen> {
           SpinKitRipple(color: Colors.white),
         ],
       ),
-    ));
+    ),);
+
   }
+
 }

@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
 import 'dart:math';
-import 'PlayersPage.dart';
+import 'players_screen.dart';
 
 // ignore: must_be_immutable
 class GamePage extends StatelessWidget {
   List<String> _tasks = List<String>();
   List<String> _persons = List<String>();
   bool isFirstTask = true;
+  bool isGameOver = false;
+  int counterForGameOver = 0;
   var _isNextBackgroundLight = true;
 
   @override
@@ -16,7 +18,13 @@ class GamePage extends StatelessWidget {
           child: GestureDetector(
             behavior: HitTestBehavior.opaque,
             onTap: () {
-              (context as Element).reassemble();
+              if(isGameOver) {
+                isGameOver = false;
+                counterForGameOver = 0;
+                Navigator.of(context).pop();
+              } else {
+                (context as Element).reassemble();
+              }
             },
             child: new Container(
               padding: const EdgeInsets.all(30.0),
@@ -35,10 +43,7 @@ class GamePage extends StatelessWidget {
                       height: 250.0,
                       width: 800,
                     ),
-                    Text(
-                      generateGameTask(),
-                      style: new TextStyle(color: Colors.white, fontSize: 20.0),
-                    ),
+                    textForTaskOrGameOver(),
                     new Padding(padding: EdgeInsets.only(top: 20.0)),
                   ]),
                 ),
@@ -47,6 +52,23 @@ class GamePage extends StatelessWidget {
           ),
         )
     );
+  }
+
+
+  Text textForTaskOrGameOver(){
+    if(counterForGameOver >= 100){
+      isGameOver = true;
+      return new Text(
+        "Game Over",
+        style: new TextStyle(color: Colors.white, fontSize: 50.0),
+      );
+    } else {
+      counterForGameOver += 1;
+      return new Text(
+          generateGameTask(),
+        style: new TextStyle(color: Colors.white, fontSize: 20.0),
+      );
+    }
   }
 
   String getOneRandomPerson() {

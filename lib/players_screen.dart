@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'GamePage.dart';
+import 'game_screen.dart';
 
 // ignore: must_be_immutable
 class PlayersPage extends StatelessWidget {
