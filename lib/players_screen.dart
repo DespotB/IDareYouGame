@@ -129,6 +129,10 @@ class PlayersPage extends StatelessWidget {
                         } else {
                           Navigator.of(context).push(new MaterialPageRoute(
                               builder: (context) => _gamePage));
+                          SystemChrome.setPreferredOrientations([
+                            DeviceOrientation.landscapeRight,
+                            DeviceOrientation.landscapeLeft,
+                          ]);
                         }
                       },
                       label: Text('Start Game (' + _players.length.toString() + ')'),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'dart:math';
 import 'players_screen.dart';
 
@@ -22,6 +23,12 @@ class GamePage extends StatelessWidget {
                 isGameOver = false;
                 counterForGameOver = 0;
                 Navigator.of(context).pop();
+                SystemChrome.setPreferredOrientations([
+                  DeviceOrientation.landscapeRight,
+                  DeviceOrientation.landscapeLeft,
+                  DeviceOrientation.portraitUp,
+                  DeviceOrientation.portraitDown,
+                ]);
               } else {
                 (context as Element).reassemble();
               }
@@ -40,7 +47,7 @@ class GamePage extends StatelessWidget {
                       ),
                     ),
                     new Container(
-                      height: 250.0,
+                      height: 80.0,
                       width: 800,
                     ),
                     textForTaskOrGameOver(),
@@ -66,7 +73,10 @@ class GamePage extends StatelessWidget {
       counterForGameOver += 1;
       return new Text(
           generateGameTask(),
-        style: new TextStyle(color: Colors.white, fontSize: 20.0),
+        textAlign: TextAlign.center,
+        style: new TextStyle(
+            color: Colors.white,
+            fontSize: 30.0),
       );
     }
   }
