@@ -29,6 +29,10 @@ class _MyLoadingScreenState extends State<MyLoadingScreen> {
         Duration(seconds: 5),
         () => Navigator.push(
             context, MaterialPageRoute(builder: (context) => PlayersPage())));
+    SystemChrome.setPreferredOrientations([
+      DeviceOrientation.portraitUp,
+      DeviceOrientation.portraitDown,
+    ]);
   }
 
   @override

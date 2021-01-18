@@ -24,8 +24,6 @@ class GamePage extends StatelessWidget {
                 counterForGameOver = 0;
                 Navigator.of(context).pop();
                 SystemChrome.setPreferredOrientations([
-                  DeviceOrientation.landscapeRight,
-                  DeviceOrientation.landscapeLeft,
                   DeviceOrientation.portraitUp,
                   DeviceOrientation.portraitDown,
                 ]);
@@ -67,7 +65,7 @@ class GamePage extends StatelessWidget {
       isGameOver = true;
       return new Text(
         "Game Over",
-        style: new TextStyle(color: Colors.white, fontSize: 50.0),
+        style: new TextStyle(color: Colors.white, fontSize: 60.0),
       );
     } else {
       counterForGameOver += 1;
@@ -117,7 +115,6 @@ class GamePage extends StatelessWidget {
     task = task.replaceAll("PERSONB", personB);
     task = task.replaceAll("PERSONC", personC);
     task = task.replaceAll("PERSOND", personD);
-
     return task;
   }
 
