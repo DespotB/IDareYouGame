@@ -180,6 +180,16 @@ class GamePage extends StatelessWidget {
 
   void initializeAllPersons() {
     _tasks.add('Everybody undresses one clothing or finishes their drink.');
+    _tasks.add('Everybody who can touch their nose with their tongue, give out four sips.');
+    _tasks.add('Every girl drinks as much sips as the number of hot boys who are playing from her point of view.');
+    _tasks.add('Every boy drinks as much sips as the number of hot girls who are playing from his point of view.');
+    _tasks.add('Everybody spin a bottle and kiss the person it points at or drink four times.');
+    _tasks.add("Girls, take off a piece of clothing or drink two times.");
+    _tasks.add("Boys, take off a piece of clothing or drink two times.");
+    _tasks.add("How many people have you had sex with? Each person answers. If someone lies they finish their drink. PERSONA, you start.");
+    _tasks.add("Everybody drink 2 times if you've ever held a sex toy in your hands.");
+    _tasks.add("Drink four sips if you've ever slept with someone in a youth hostel.");
+    _tasks.add("Everyone take off a piece of clothing!");
   }
 
   void initializeOnePerson() {
@@ -211,7 +221,7 @@ class GamePage extends StatelessWidget {
     _tasks.add(
         'PERSONA name at least three types of sex toys or drink three times.');
     _tasks.add('PERSONA name at least three porn stars or drink three times.');
-    _tasks.add('PERSONA take of three articles of clothing or drink 2 shots.');
+    _tasks.add('PERSONA take of three articles of clothing or drink 4 shots.');
     _tasks.add(
         'FREESTYLE: The group makes up a challenge for PERSONA, do it or you drink four times.');
     _tasks.add(
@@ -313,6 +323,16 @@ class GamePage extends StatelessWidget {
         "PERSONA put two ice cubes under your armpits and leave them there until they melt or drink twice.");
     _tasks.add(
         "PERSONA dance on the table to a song of the groups choice for at least 30 second or finish your drink.");
+    _tasks.add('PERSONA, give out four sips to the hottest person from your point of view.');
+    _tasks.add("PERSONA, close your eyes and try to recognise each player just form their smell. Drink tree sips if you can't.");
+    _tasks.add('PERSONA, choose a word. First person to sing a song with this word, give out two sips.');
+    _tasks.add("PERSONA, give out as many sips as there are single people around the table.");
+    _tasks.add("PERSONA, challenge a player to unclip a female player's bra. If that person can't do it in 5 seconds time, he/she drinks three slips.");
+    _tasks.add("PERSONA, let someone of your choice give you a hickey, where you want. Any refusal means two slips.");
+    _tasks.add("PERSONA, lick someone's mouth or drink 3 times.");
+    _tasks.add("PERSONA, choose someone to show one of their private parts. 4 sips in case of refusal.");
+    _tasks.add("PERSONA, go around the room and drink three times and say who you want to have sex with tonight.");
+    _tasks.add("PERSONA, if you made love for the first time before 17, give out two sips.");
   }
 
   void initializeTwoPersons() {
@@ -415,6 +435,12 @@ class GamePage extends StatelessWidget {
         "PERSONA ask PERSONB a true or false question about yourself. If they get it right you drink, else they drink.");
     _tasks.add(
         "PERSONA use your feet to give PERSONB a sip from their drink without spilling. Both must do this or drink three times.");
+    _tasks.add('PERSONA, kiss PERSONB or drink three times.');
+    _tasks.add("PERSONA, if having sex with PERSONB wouldn't bother you, give out five sips.");
+    _tasks.add("PERSONA must have one hand on PERSONB's thigh for one round.");
+    _tasks.add("PERSONA, if PERSONB has ever seen you with no shirt on or in your bra, give out two sips. Otherwise drink them.");
+    _tasks.add("PERSONA, kiss PERSONB or drink three times.");
+
   }
 
   void initializeThreePersons() {
@@ -426,6 +452,9 @@ class GamePage extends StatelessWidget {
         'PERSONA let PERSONB and PERSONC pinch your nipples or drink four times.');
     _tasks.add(
         'PERSONA and PERSONB act out a sex position which PERSONC chooses or drink two times.');
+    _tasks.add("PERSONA, make up your mind: which player do you think wants to have sex more, PERSONB or PERSONC? This player must drink4 sips and can go masturbate.");
+    _tasks.add("PERSONA, make up your midn: who do you think is more capable of having anal sex with a stranger, PERSONB or PERSONC? This person must give out five sips.");
+    _tasks.add("PERSONA, make up your mind: who do you think has more beautiful eyes, PERSONB or PERSONC? This person must give out four sips.");
   }
 
   void initializeFourPersons() {
