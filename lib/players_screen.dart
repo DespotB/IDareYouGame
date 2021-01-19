@@ -157,7 +157,23 @@ class PlayersPage extends StatelessWidget {
                           ]);
                         }
                       },
-                      label: Text('Start Game (' + _players.length.toString() + ')'),
+                      label: Text('Start Game (' + _players.length.toString() + ')',
+                      style: new TextStyle(
+                          shadows: [
+                            Shadow(
+                              color: Color(0xff00efd1),
+                              blurRadius: 5.0,
+                              offset: Offset(1.0, 1.0),
+                            ),
+                            Shadow(
+                              color: Color(0xFF00ceb4),
+                              blurRadius: 5.0,
+                              offset: Offset(-1.0, 1.0),
+                            ),
+                          ],
+                          fontFamily: "Horizon",
+                          color: Colors.white,
+                          fontSize: 20.0),),
                       icon: Icon(Icons.play_arrow_outlined),
                       backgroundColor: Color(0xFF3d5d72),
                     ),
