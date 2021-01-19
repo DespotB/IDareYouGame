@@ -61,11 +61,26 @@ class GamePage extends StatelessWidget {
 
 
   Text textForTaskOrGameOver(){
-    if(counterForGameOver >= 100){
+    if(counterForGameOver >= 1){
       isGameOver = true;
       return new Text(
-        "Game Over",
-        style: new TextStyle(color: Colors.white, fontSize: 60.0),
+        "Round Over",
+        style: new TextStyle(
+            shadows: [
+              Shadow(
+                color: Color(0xff00efd1),
+                blurRadius: 10.0,
+                offset: Offset(5.0, 5.0),
+              ),
+              Shadow(
+                color: Color(0xFF3d5d72),
+                blurRadius: 10.0,
+                offset: Offset(-5.0, 5.0),
+              ),
+            ],
+          fontFamily: "Horizon",
+            color: Colors.white,
+            fontSize: 70.0),
       );
     } else {
       counterForGameOver += 1;
@@ -73,6 +88,7 @@ class GamePage extends StatelessWidget {
           generateGameTask(),
         textAlign: TextAlign.center,
         style: new TextStyle(
+          fontFamily: "Arial",
             color: Colors.white,
             fontSize: 30.0),
       );

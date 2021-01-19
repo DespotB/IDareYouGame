@@ -1,3 +1,4 @@
+import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -32,10 +33,30 @@ class PlayersPage extends StatelessWidget {
                       ),
                     ),
                     new Padding(padding: EdgeInsets.only(top: 20.0)),
-                    new Text(
-                      'Add players to the game',
-                      style: new TextStyle(
-                          color: Color(0xFF3d5d72), fontSize: 25.0),
+                    new ScaleAnimatedTextKit(
+                      text: ['Add players to the game'],
+                      textAlign: TextAlign.center,
+                      isRepeatingAnimation: false,
+                      duration: Duration(milliseconds: 3000),
+                      textStyle: TextStyle(
+                        fontSize: 25.0,
+                        fontFamily: "Horizon",
+                        fontStyle: FontStyle.normal,
+                        fontWeight: FontWeight.bold,
+                        color: Color(0xFFFFFFFF),
+                        shadows: [
+                          Shadow(
+                            color: Color(0xff00efd1),
+                            blurRadius: 5.0,
+                            offset: Offset(2.0, 2.0),
+                          ),
+                          Shadow(
+                            color: Color(0xFF3d5d72),
+                            blurRadius: 5.0,
+                            offset: Offset(-2.0, 2.0),
+                          ),
+                        ],
+                      ),
                     ),
                     new Padding(padding: EdgeInsets.only(top: 20.0)),
                     for (var name in _players)
@@ -58,7 +79,9 @@ class PlayersPage extends StatelessWidget {
                                       contentPadding: EdgeInsets.zero,
                                       hintText: name,
                                       hintStyle: TextStyle(
-                                          fontSize: 18.0, color: Colors.white),
+                                          fontFamily: "Horizon",
+                                          fontSize: 18.0,
+                                          color: Colors.white),
                                       enabledBorder: OutlineInputBorder(
                                           borderSide:
                                               BorderSide(color: Colors.red),
@@ -85,8 +108,8 @@ class PlayersPage extends StatelessWidget {
                     new TextFormField(
                       controller: _controller,
                       decoration: new InputDecoration(
-                        labelText: "Enter player name",
                         labelStyle: TextStyle(color: Colors.white),
+                        fillColor: Color(0xFFf94367),
                         suffixIcon: IconButton(
                             onPressed: () {
                               if (_controller.value.text.length > 0) {
@@ -116,8 +139,7 @@ class PlayersPage extends StatelessWidget {
                       keyboardType: TextInputType.name,
                       style: new TextStyle(
                         fontFamily: "Aleo",
-                        color: Colors.white,
-                      ),
+                        color: Colors.white,),
                     ),
                     new Padding(padding: EdgeInsets.only(bottom: 20.0)),
                     new FloatingActionButton.extended(
