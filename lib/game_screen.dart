@@ -6,6 +6,7 @@ import 'players_screen.dart';
 // ignore: must_be_immutable
 class GamePage extends StatelessWidget {
   List<String> _tasks = List<String>();
+  List<String> _doneTasks = List<String>();
   List<String> _persons = List<String>();
   bool isFirstTask = true;
   bool isGameOver = false;
@@ -61,7 +62,7 @@ class GamePage extends StatelessWidget {
 
 
   Text textForTaskOrGameOver(){
-    if(counterForGameOver >= 1){
+    if(counterForGameOver >= 100){
       isGameOver = true;
       return new Text(
         "Round Over",
@@ -102,9 +103,10 @@ class GamePage extends StatelessWidget {
 
   String getRandomTask() {
     if(_tasks.isEmpty){
-      return null;
+      return getRandomElement(_doneTasks);
     }else {
       String task = getRandomElement(_tasks);
+      _doneTasks.add(task);
       _tasks.remove(task);
       return task;
     }
@@ -124,13 +126,17 @@ class GamePage extends StatelessWidget {
     var personB = randomPersons[1];
     var personC = randomPersons[2];
     var personD = randomPersons[3];
-
-    print(task);
-    print(randomPersons);
     task = task.replaceAll("PERSONA", personA);
     task = task.replaceAll("PERSONB", personB);
     task = task.replaceAll("PERSONC", personC);
     task = task.replaceAll("PERSOND", personD);
+
+    //TESTS
+    print("Amount of Tasks: " + _tasks.length.toString());
+    print("Task: " + task);
+    print("All persons: " + randomPersons.toString());
+    //TEST OVER
+
     return task;
   }
 
