@@ -46,6 +46,15 @@ flutter:
       fonts:
         - asset: fonts/Horizon Italic.otf
         - asset: fonts/Horizon.otf
+    - family: Dreamwood
+      fonts:
+        - asset: fonts/Blackberry.ttf
+    - family: Brightons
+      fonts:
+        - asset: fonts/Brightons.otf
+    - family: Dreamwood
+      fonts:
+        - asset: fonts/Dreamwood.ttf
 
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in

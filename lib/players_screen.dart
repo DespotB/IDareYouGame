@@ -39,20 +39,25 @@ class PlayersPage extends StatelessWidget {
                           isRepeatingAnimation: false,
                           duration: Duration(milliseconds: 3000),
                           textStyle: TextStyle(
-                            fontSize: 25.0,
-                            fontFamily: "Horizon",
+                            fontSize: 30.0,
+                            fontFamily: "Dreamwood",
                             fontStyle: FontStyle.normal,
                             fontWeight: FontWeight.bold,
                             color: Color(0xFFFFFFFF),
                             shadows: [
                               Shadow(
-                                color: Color(0xff00efd1),
-                                blurRadius: 5.0,
-                                offset: Offset(2.0, 2.0),
+                                color: Color(0xFF3d5d72),
+                                blurRadius: 7.0,
+                                offset: Offset(-2.0, 2.0),
                               ),
                               Shadow(
                                 color: Color(0xFF3d5d72),
-                                blurRadius: 5.0,
+                                blurRadius: 7.0,
+                                offset: Offset(-2.0, 2.0),
+                              ),
+                              Shadow(
+                                color: Color(0xFF3d5d72),
+                                blurRadius: 7.0,
                                 offset: Offset(-2.0, 2.0),
                               ),
                             ],
@@ -87,12 +92,12 @@ class PlayersPage extends StatelessWidget {
                                                   offset: Offset(1.0, 1.0),
                                                 ),
                                                 Shadow(
-                                                  color: Color(0xFF00ceb4),
+                                                  color: Color(0xFF3d5d72),
                                                   blurRadius: 5.0,
                                                   offset: Offset(-1.0, 1.0),
                                                 ),
                                               ],
-                                              fontFamily: "Horizon",
+                                              fontFamily: "Blackberry",
                                               fontSize: 18.0,
                                               color: Colors.white),
                                           enabledBorder: OutlineInputBorder(
@@ -102,7 +107,7 @@ class PlayersPage extends StatelessWidget {
                                                   Radius.circular(30))),
                                           focusedBorder: OutlineInputBorder(
                                               borderSide:
-                                                  BorderSide(color: Colors.red),
+                                                  BorderSide(color: Colors.white),
                                               borderRadius: BorderRadius.all(
                                                   Radius.circular(30))),
                                           prefixIcon: Icon(
@@ -121,6 +126,7 @@ class PlayersPage extends StatelessWidget {
                         new TextField(
                           controller: _controller,
                           decoration: new InputDecoration(
+                            border: InputBorder.none,
                             filled: true,
                             labelStyle: TextStyle(color: Colors.white),
                             fillColor: Color(0xFF3d5d72),
@@ -147,7 +153,6 @@ class PlayersPage extends StatelessWidget {
                               borderRadius: BorderRadius.circular(25.0),
                               borderSide: BorderSide(
                                 color: Colors.white,
-                                width: 2.0,
                               ),
                             ),
                             //fillColor: Colors.green
@@ -155,14 +160,13 @@ class PlayersPage extends StatelessWidget {
                           keyboardType: TextInputType.name,
                           textAlign: TextAlign.left,
                           style: new TextStyle(
-                            fontFamily: "Arial",
+                            fontFamily: "Blackberry",
                             color: Colors.white,
                             fontSize: 18,
                           ),
                         ),
                         new Padding(padding: EdgeInsets.only(bottom: 20.0)),
                         new FloatingActionButton.extended(
-
                           onPressed: () {
                             // Add your onPressed code here!
                             _gamePage.setPersons(_players);
@@ -186,13 +190,8 @@ class PlayersPage extends StatelessWidget {
                                     blurRadius: 5.0,
                                     offset: Offset(1.0, 1.0),
                                   ),
-                                  Shadow(
-                                    color: Color(0xFF00ceb4),
-                                    blurRadius: 5.0,
-                                    offset: Offset(-1.0, 1.0),
-                                  ),
                                 ],
-                                fontFamily: "Horizon",
+                                fontFamily: "Blackberry",
                                 color: Colors.white,
                                 fontSize: 20.0),
                           ),
