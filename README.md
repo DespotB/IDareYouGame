@@ -1,6 +1,6 @@
 # The Naughty Drinking Game
 
-Its a naughty drinking game for free.
+Drinking game where you get dares distributed to people and have to either execute the dare or drink.
 
 ## Getting Started
 
